@@ -16,12 +16,13 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 /**
- *
+ * Base persistence manager class. Extend this for class for basic domain object persistence management.
  */
+@SuppressWarnings( "unchecked" )
 public class PersistenceManager<T>
   {
-  final PersistenceFactory factory;
-  final Class typeOfT;
+  final private PersistenceFactory factory;
+  final private Class typeOfT;
 
   public PersistenceManager( final PersistenceFactory factory )
     {
