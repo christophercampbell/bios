@@ -1,3 +1,9 @@
+build
+bios.ipr
+bios.iml
+bios.iws
+.gradle
+
 *.class
 
 # Mobile Tools for Java (J2ME)
