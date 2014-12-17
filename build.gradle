@@ -59,3 +59,10 @@ jettyRun {
   System.setProperty("hibernate.connection.username", "root")
   System.setProperty("hibernate.connection.password", "root")
 }
+
+// Add options to java compiler
+gradle.projectsEvaluated {
+  tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+  }
+}
