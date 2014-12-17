@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+  PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
+
+  <display-name>Bios Project</display-name>
+
+  <listener>
+     <listener-class>bios.BiosServletContextListener</listener-class>
+  </listener>
+
+  <filter>
+    <filter-name>guiceFilter</filter-name>
+    <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>guiceFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <welcome-file-list>
+    <welcome-file>../index.html</welcome-file>
+  </welcome-file-list>
+
+  <security-constraint>
+      <display-name>Admin</display-name>
+      <web-resource-collection>
+        <web-resource-name>admin</web-resource-name>
+        <url-pattern>/admin/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <role-name>bios-admin</role-name>
+      </auth-constraint>
+      <user-data-constraint>
+        <transport-guarantee>NONE</transport-guarantee>
+      </user-data-constraint>
+    </security-constraint>
+
+    <login-config>
+      <auth-method>BASIC</auth-method>
+      <realm-name>bios</realm-name>
+    </login-config>
+
+    <security-role>
+      <description>The role required to access restricted content </description>
+      <role-name>bios-admin</role-name>
+    </security-role>
+
+
+</web-app>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2007-2014 Concurrent, Inc. All Rights Reserved.
+  ~
+  ~ Project and contact information: http://www.concurrentinc.com/
+  -->
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="bios.persist.Taxon" table="taxon">
+     <id       name="id"         column="id"          type="integer">
+       <generator class="native" />
+     </id>
+     <!--<property name="rankId"     column="rank_id"     type="integer"/>-->
+     <many-to-one name="rank" class="bios.persist.Rank" column="rank_id" cascade="none" lazy="false"/>
+     <property name="parentId"   column="parent_id"   type="integer"/>
+     <property name="name"       column="name"        type="string"/>
+     <property name="commonName" column="common_name" type="string"/>
+   </class>
+</hibernate-mapping>
