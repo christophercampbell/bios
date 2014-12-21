@@ -1,3 +1,5 @@
+-- create a database named taxonomy
+
 CREATE TABLE `rank` (
 id integer AUTO_INCREMENT NOT NULL,
 name varchar (16) NOT NULL,
