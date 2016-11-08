@@ -3,6 +3,5 @@ package bios;
 /**
  *
  */
-public class BiosProperties
-  {
-  }
+public class BiosProperties {
+}
