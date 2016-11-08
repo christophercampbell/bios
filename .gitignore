@@ -3,6 +3,8 @@ bios.ipr
 bios.iml
 bios.iws
 .gradle
+.idea
+.DS_Store
 
 *.class
 
