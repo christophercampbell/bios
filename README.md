@@ -11,10 +11,18 @@ A data driven taxononmy viewer webapp. This is a work in progress and must evolv
 - [x] Example data
 - [ ] Entry form for new nodes
 - [ ] Add more tasks
+- [ ] Add links to example species images
 
 ## User pages
 
-http://christophercampbell.github.io/bios/
+This project 
+
+https://christophercampbell.github.io/bios/
+
+Perobscurus
+
+https://christophercampbell.github.io
+
 
 ## Requirements
 
