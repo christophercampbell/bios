@@ -12,6 +12,7 @@ A data driven taxononmy viewer webapp. This is a work in progress and must evolv
 - [ ] Entry form for new nodes
 - [ ] Add more tasks
 - [ ] Add links to example species images
+- [ ] Style user pages
 
 ## User pages
 
