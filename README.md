@@ -3,22 +3,22 @@ bios
 
 A data driven taxononmy viewer webapp. This is a work in progress and must evolve or go extinct.
 
+![Tree example screenshot](docs/screenshot-1.png)
+
+- [x] Schema
+- [x] ORM
+- [x] Tree viewer from node
+- [x] Example data
+- [ ] Entry form for new nodes
+- [ ] Add more tasks
+
+
 ## Requirements
 
 	java jdk
 	gradle
 	mysql
-	
-## Recommendations
-
-    Intellij
-
-## Generate Intellij project
-
-    $ cd bios 
-    $ gradle idea
-    $ open bios.ipr
-    	
+	    	
 ## Create a database
 
     $ cd bios
